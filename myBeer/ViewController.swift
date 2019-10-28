@@ -9,12 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var beerNameLabel: UILabel!
+    @IBOutlet weak var beerDescription: UITextView!
+    @IBOutlet weak var beerIconImage: UIImageView!
+    
+    var myBeer: Beer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        beerNameLabel.text = myBeer?.name
+        beerDescription.text = myBeer?.description
+        //beerIconImage.image =
     }
-
-
 }
 
